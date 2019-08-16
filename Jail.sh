@@ -5,10 +5,10 @@
 # Author: Maxim A. 
 #####################################################
 # Create physical volume
-pvcreate /dev/sdb
+pvcreate --yes /dev/sdb
 
 # Create Volume group
-vgcreate DATA /dev/sdb
+vgcreate  DATA /dev/sdb
 
 # Create Logical group
 lvcreate -L 199G -n download DATA
